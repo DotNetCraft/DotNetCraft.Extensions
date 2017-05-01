@@ -1,0 +1,7 @@
+src/DotNetCraft.Common.NLogger/bin/
+packages/
+src/DotNetCraft.Common.NLogger/obj/
+lib/
+*.nupkg
+*.user
+*.suo

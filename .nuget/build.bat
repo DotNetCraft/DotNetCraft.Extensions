@@ -1,0 +1,1 @@
+nuget.exe pack DotNetCraft.Common.NLogger.nuspec

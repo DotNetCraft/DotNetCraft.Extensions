@@ -1,4 +1,4 @@
-# Travis-CI Build for DotNetCraft.Common
+# Travis-CI Build for DotNetCraft.Extensions
 # see travis-ci.org for details
 
 language: csharp

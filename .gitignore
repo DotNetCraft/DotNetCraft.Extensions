@@ -5,3 +5,7 @@ lib/
 *.nupkg
 *.user
 *.suo
+tests/NinjectDependencyResolver.Tests/bin/
+src/DotNetCraft.Common.NinjectDependencyResolver/obj/
+tests/NinjectDependencyResolver.Tests/obj/
+src/DotNetCraft.Common.NinjectDependencyResolver/bin/

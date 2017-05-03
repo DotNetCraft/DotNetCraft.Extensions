@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>DotNetCraft.Common.NinjectDependencyResolver</id>
+    <version>1.0.0</version>
+    <title>DotNetCraft.Common.NinjectDependencyResolver For .NET</title>
+    <summary>Ninject integration for DotNetCraft.Common</summary>
+    <description>Provides Ninject integration for other DotNetCraft projects.</description>
+    <releaseNotes />
+    <language>en-US</language>
+    <iconUrl>https://raw.githubusercontent.com/DotNetCraft/ConfigurationParser/master/Avatar.png</iconUrl>
+    <licenseUrl>https://github.com/DotNetCraft/DotNetCraft.Common/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/DotNetCraft/DotNetCraft.Common</projectUrl>
+    <authors>DotNetCraft</authors>
+    <owners>DotNetCraft</owners>
+    <copyright>DotNetCraft 2017</copyright>
+    <tags>Ninject Dependency Injection DI IoC container</tags>
+    <dependencies>
+      <dependency id="DotNetCraft.Common" version="1.0.5" />
+      <dependency id="Ninject" version="3.2.2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\lib\net40\DotNetCraft.Common.NinjectDependencyResolver.dll" target="lib\net40" />
+  </files>
+</package>

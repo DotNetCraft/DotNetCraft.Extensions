@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9AF8496A-D568-4B03-98CF-F2102E0796C4}</ProjectGuid>
+    <ProjectGuid>{2B426B01-66FC-4180-A6E7-84C5A48E505A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NinjectDependencyResolver.Tests</RootNamespace>
-    <AssemblyName>NinjectDependencyResolver.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <RootNamespace>DotNetCraft.FunctionManager.Tests</RootNamespace>
+    <AssemblyName>DotNetCraft.FunctionManager.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -28,39 +28,10 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DotNetCraft.Common.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\DotNetCraft.Common.1.0.5\lib\net40\DotNetCraft.Common.Core.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="DotNetCraft.Common.Core.Domain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\DotNetCraft.Common.1.0.5\lib\net40\DotNetCraft.Common.Core.Domain.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="DotNetCraft.Common.Core.Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\DotNetCraft.Common.1.0.5\lib\net40\DotNetCraft.Common.Core.Utils.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="DotNetCraft.Common.DataAccessLayer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\DotNetCraft.Common.1.0.5\lib\net40\DotNetCraft.Common.DataAccessLayer.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="DotNetCraft.Common.Domain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\DotNetCraft.Common.1.0.5\lib\net40\DotNetCraft.Common.Domain.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="DotNetCraft.Common.Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\DotNetCraft.Common.1.0.5\lib\net40\DotNetCraft.Common.Utils.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="NSubstitute, Version=2.0.2.0, Culture=neutral, PublicKeyToken=92dd2e9066daa5ca, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NSubstitute.2.0.2\lib\net45\NSubstitute.dll</HintPath>
+      <HintPath>..\..\Packages\NSubstitute.2.0.2\lib\net40\NSubstitute.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
@@ -73,20 +44,19 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NinjectDependencyResolverTests.cs" />
+    <Compile Include="DemonstrationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\DotNetCraft.Common.NinjectDependencyResolver\DotNetCraft.Common.NinjectDependencyResolver.csproj">
-      <Project>{D2156D43-0C0C-4BAD-A017-EF6F09967D8A}</Project>
-      <Name>DotNetCraft.Common.NinjectDependencyResolver</Name>
+    <ProjectReference Include="..\..\src\DotNetCraft.FunctionManager\DotNetCraft.FunctionManager.csproj">
+      <Project>{5D3DBC2F-C2A7-45F2-9211-BCE0202749AA}</Project>
+      <Name>DotNetCraft.FunctionManager</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

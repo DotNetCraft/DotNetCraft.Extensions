@@ -9,3 +9,8 @@ tests/NinjectDependencyResolver.Tests/bin/
 src/DotNetCraft.Common.NinjectDependencyResolver/obj/
 tests/NinjectDependencyResolver.Tests/obj/
 src/DotNetCraft.Common.NinjectDependencyResolver/bin/
+Tests/DotNetCraft.FunctionManager.Tests/bin/
+src/DotNetCraft.FunctionManager/obj/
+src/DotNetCraft.FunctionManager/bin/
+Tests/DotNetCraft.FunctionManager.Tests/obj/Release/DotNetCraft.FunctionManager.Tests.csproj.FileListAbsolute.txt
+Tests/DotNetCraft.FunctionManager.Tests/obj/

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5D3DBC2F-C2A7-45F2-9211-BCE0202749AA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DotNetCraft.FunctionManager</RootNamespace>
+    <AssemblyName>DotNetCraft.FunctionManager</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Exceptions\FunctionManagerException.cs" />
+    <Compile Include="Implementation\Builders\SimpleManagerBuilder.cs" />
+    <Compile Include="Implementation\Builders\SmartManagerBuilder.cs" />
+    <Compile Include="Implementation\UserFunctionDetails\FunctionWrapper.cs" />
+    <Compile Include="Implementation\ExceptionManagement\Managers\SimpleExceptionManager.cs" />
+    <Compile Include="Implementation\ExceptionManagement\Managers\SmartExceptionStrategiesManager.cs" />
+    <Compile Include="Implementation\Strategies\AttemptParameters\AttemptInformation.cs" />
+    <Compile Include="Implementation\Strategies\AttemptParameters\TimeSpanAttemptInformation.cs" />
+    <Compile Include="Implementation\Strategies\BaseStrategy.cs" />
+    <Compile Include="Implementation\Strategies\RunForeverStrategy.cs" />
+    <Compile Include="Implementation\Strategies\SeveralAttemptsStrategy.cs" />
+    <Compile Include="Implementation\Strategies\WaitStrategy.cs" />
+    <Compile Include="Implementation\UserFunctionDetails\FunctionParameters\UserAction.cs" />
+    <Compile Include="FunctionBuilder.cs" />
+    <Compile Include="Implementation\UserFunctionDetails\FunctionParameters\UserContext.cs" />
+    <Compile Include="Interfaces\Builders\IFunctionWrapperBuilder.cs" />
+    <Compile Include="Interfaces\Builders\ISimpleManagerBuilder.cs" />
+    <Compile Include="Interfaces\Builders\ISmartManagerBuilder.cs" />
+    <Compile Include="Interfaces\ExceptionManagement\IExceptionDecisionMaker.cs" />
+    <Compile Include="Interfaces\ExceptionManagement\IExceptionRegistration.cs" />
+    <Compile Include="Interfaces\ExceptionManagement\Managers\ISimpleExceptionManager.cs" />
+    <Compile Include="Interfaces\ExceptionManagement\Managers\ISmartExceptionStrategiesManager.cs" />
+    <Compile Include="Interfaces\ExceptionManagement\IStrategyRegistration.cs" />
+    <Compile Include="Interfaces\ExceptionManagement\Strategies\AttemptParameters\IAttemptInformation.cs" />
+    <Compile Include="Interfaces\ExceptionManagement\Strategies\IExceptionStrategy.cs" />
+    <Compile Include="Interfaces\UserFunctionDetails\IUserAction.cs" />
+    <Compile Include="Interfaces\UserFunctionDetails\IUserContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

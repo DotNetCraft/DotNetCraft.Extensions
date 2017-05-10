@@ -1,9 +1,10 @@
 ﻿using System;
+using DotNetCraft.FunctionManager;
 using DotNetCraft.FunctionManager.Implementation.UserFunctionDetails;
 using DotNetCraft.FunctionManager.Implementation.UserFunctionDetails.FunctionParameters;
 using NUnit.Framework;
 
-namespace DotNetCraft.FunctionManager.Tests
+namespace FunctionManager.Tests
 {
     [TestFixture]
     public class DemonstrationTests

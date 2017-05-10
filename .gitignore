@@ -14,3 +14,5 @@ src/DotNetCraft.FunctionManager/obj/
 src/DotNetCraft.FunctionManager/bin/
 Tests/DotNetCraft.FunctionManager.Tests/obj/Release/DotNetCraft.FunctionManager.Tests.csproj.FileListAbsolute.txt
 Tests/DotNetCraft.FunctionManager.Tests/obj/
+Tests/FunctionManager.Tests/obj/
+Tests/FunctionManager.Tests/bin/

@@ -7,8 +7,8 @@
     <ProjectGuid>{2B426B01-66FC-4180-A6E7-84C5A48E505A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DotNetCraft.FunctionManager.Tests</RootNamespace>
-    <AssemblyName>DotNetCraft.FunctionManager.Tests</AssemblyName>
+    <RootNamespace>FunctionManager.Tests</RootNamespace>
+    <AssemblyName>FunctionManager.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

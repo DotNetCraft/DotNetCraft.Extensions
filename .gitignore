@@ -16,3 +16,7 @@ Tests/DotNetCraft.FunctionManager.Tests/obj/Release/DotNetCraft.FunctionManager.
 Tests/DotNetCraft.FunctionManager.Tests/obj/
 Tests/FunctionManager.Tests/obj/
 Tests/FunctionManager.Tests/bin/
+test/NinjectDependencyResolver.Tests/bin/
+test/NinjectDependencyResolver.Tests/obj/
+test/FunctionManager.Tests/obj/
+test/FunctionManager.Tests/bin/

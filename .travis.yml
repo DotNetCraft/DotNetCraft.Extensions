@@ -23,8 +23,8 @@ install:
 # Run the build script
 script:
  - xbuild /p:Configuration=Release DotNetCraft.Extensions.sln
- - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./tests/NinjectDependencyResolver.Tests/bin/Release/NinjectDependencyResolver.Tests.dll
- - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./tests/FunctionManager.Tests/bin/Release/FunctionManager.Tests.dll
+ - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./test/NinjectDependencyResolver.Tests/bin/Release/NinjectDependencyResolver.Tests.dll
+ - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./test/FunctionManager.Tests/bin/Release/FunctionManager.Tests.dll
 
 # Only watch the master branch.
 branches:

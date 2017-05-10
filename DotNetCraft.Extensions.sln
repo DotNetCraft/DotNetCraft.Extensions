@@ -29,7 +29,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCraft.FunctionManager
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{0725D03E-8BFA-4300-9094-550C4283AC95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionManager.Tests", "Tests\FunctionManager.Tests\FunctionManager.Tests.csproj", "{2B426B01-66FC-4180-A6E7-84C5A48E505A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionManager.Tests", "tests\FunctionManager.Tests\FunctionManager.Tests.csproj", "{2B426B01-66FC-4180-A6E7-84C5A48E505A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

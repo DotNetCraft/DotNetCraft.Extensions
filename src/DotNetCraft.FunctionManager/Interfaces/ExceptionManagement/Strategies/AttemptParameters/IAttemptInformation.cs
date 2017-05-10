@@ -8,6 +8,7 @@
         /// <summary>
         /// Number of attempt.
         /// </summary>
+        /// <remarks> Started from 0... </remarks>
         int AttemptNumber { get; }
     }
 }

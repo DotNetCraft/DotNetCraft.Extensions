@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package>
   <metadata>
-    <id>DotNetCraft.Common.Utils.NLog</id>
-    <version>1.0.5</version>
-    <title>DotNetCraft.Common.Utils.NLog For .NET</title>
-    <summary>NLog logging integration for DotNetCraft.Common</summary>
-    <description>Provides NLog logging integration for other DotNetCraft projects.</description>
+    <id>DotNetCraft.FunctionManager</id>
+    <version>1.0.0</version>
+    <title>DotNetCraft: FunctionManager For .NET</title>
+    <summary>Function Manager provides the easiest way for re-running methods after crashes</summary>
+    <description>Function Manager provides the easiest way for re-running methods after crashes. It supports different strategies such as Run Several Times, Run For Ever and Sleep Between Tries
+    </description>
     <releaseNotes />
     <language>en-US</language>
     <iconUrl>https://raw.githubusercontent.com/DotNetCraft/ConfigurationParser/master/Avatar.png</iconUrl>
@@ -14,13 +15,11 @@
     <authors>DotNetCraft</authors>
     <owners>DotNetCraft</owners>
     <copyright>DotNetCraft 2017</copyright>
-    <tags>DAL UnitOfWork Repository Data Access Layer</tags>
+    <tags>Exception Retry Rerun Handle Exception</tags>
     <dependencies>
-      <dependency id="NLog" version="4.4.4" />
-      <dependency id="DotNetCraft.Common" version="1.0.0" />
     </dependencies>
   </metadata>
   <files>
-    <file src="..\lib\net40\DotNetCraft.Common.NLogger.dll" target="lib\net40" />
+    <file src="..\lib\net40\DotNetCraft.FunctionManager.dll" target="lib\net40" />
   </files>
 </package>

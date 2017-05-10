@@ -1,5 +1,4 @@
 ﻿using System;
-using DotNetCraft.FunctionManager.Interfaces.UserFunctionDetails;
 
 namespace DotNetCraft.FunctionManager.Interfaces.ExceptionManagement
 {

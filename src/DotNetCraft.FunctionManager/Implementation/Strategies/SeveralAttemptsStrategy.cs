@@ -12,7 +12,7 @@ namespace DotNetCraft.FunctionManager.Implementation.Strategies
     {
         private readonly int _maxAttempts;
        
-        public SeveralAttemptsStrategy(int maxAttempts): base()
+        public SeveralAttemptsStrategy(int maxAttempts)
         {
             _maxAttempts = maxAttempts;
         }

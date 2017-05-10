@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using DotNetCraft.FunctionManager.Implementation.UserFunctionDetails;
+using DotNetCraft.FunctionManager.Implementation.UserFunctionDetails.FunctionParameters;
 using NUnit.Framework;
 
 namespace DotNetCraft.FunctionManager.Tests
@@ -16,14 +14,18 @@ namespace DotNetCraft.FunctionManager.Tests
         }
 
         [Test]
-        public void SingleExceptionTest()
+        public void RetrySeveralTimesExceptionTest()
         {
+            int countExceptionHandled = 0;
             MyUserContext userContext = new MyUserContext { CanExit = false };
-            FunctionWrapper<MyUserContext> function = FunctionBuilder.RegisterException<MyUserContext, IndexOutOfRangeException>().RunSeveralTimes(10, (exception, context, attemptInfo) =>
-            {
-                if (attemptInfo.AttemptNumber == 5)
-                    context.CanExit = true;
-            });
+            FunctionWrapper<MyUserContext> function = FunctionBuilder
+                .RegisterException<MyUserContext, IndexOutOfRangeException>()
+                .RunSeveralTimes(10, (exception, context, attemptInfo) =>
+                {
+                    countExceptionHandled++;
+                    if (attemptInfo.AttemptNumber == 5)
+                        context.CanExit = true;
+                });
 
             function.Execute(context => 
             {
@@ -31,6 +33,40 @@ namespace DotNetCraft.FunctionManager.Tests
                     throw new IndexOutOfRangeException();
 
             }, userContext);
+
+            Assert.AreEqual(6, countExceptionHandled);
+        }
+
+        [Test]
+        public void WaitAndRetryExceptionTest()
+        {
+            int countExceptionHandled = 0;
+            int totalMs = 0;
+            MyUserContext userContext = new MyUserContext { CanExit = false };
+            FunctionWrapper<MyUserContext> function = FunctionBuilder
+                .RegisterException<MyUserContext, IndexOutOfRangeException>()
+                .WaitAndRetry(new[]
+                {
+                    TimeSpan.FromMilliseconds(10),
+                    TimeSpan.FromMilliseconds(20),
+                    TimeSpan.FromMilliseconds(30),
+                }, (exception, context, attemptInfo) =>
+                {
+                    totalMs += attemptInfo.CurrentTimeSpan.Milliseconds;
+                    countExceptionHandled++;
+                    if (attemptInfo.AttemptNumber == 2)
+                        context.CanExit = true;
+                });
+
+            function.Execute(context =>
+            {
+                if (context.CanExit == false)
+                    throw new IndexOutOfRangeException();
+
+            }, userContext);
+
+            Assert.AreEqual(3, countExceptionHandled);
+            Assert.AreEqual(10+20+30, totalMs);
         }
     }
 }

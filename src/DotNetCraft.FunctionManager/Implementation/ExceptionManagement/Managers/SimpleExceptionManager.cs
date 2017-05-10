@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using DotNetCraft.FunctionManager.Implementation.Strategies;
 using DotNetCraft.FunctionManager.Interfaces.ExceptionManagement.Managers;
 using DotNetCraft.FunctionManager.Interfaces.ExceptionManagement.Strategies;
-using DotNetCraft.FunctionManager.Interfaces.UserFunctionDetails;
 
 namespace DotNetCraft.FunctionManager.Implementation.ExceptionManagement.Managers
 {
@@ -22,8 +21,6 @@ namespace DotNetCraft.FunctionManager.Implementation.ExceptionManagement.Manager
         /// The exception strategy.
         /// </summary>
         private IExceptionStrategy<TUserContext> exceptionStrategy;
-
-        private ISimpleExceptionManager<TUserContext> simpleExceptionManagerImplementation;
 
         #endregion
 

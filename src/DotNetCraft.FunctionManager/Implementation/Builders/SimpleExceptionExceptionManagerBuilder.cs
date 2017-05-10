@@ -2,6 +2,7 @@
 using DotNetCraft.FunctionManager.Implementation.ExceptionManagement.Managers;
 using DotNetCraft.FunctionManager.Implementation.Strategies;
 using DotNetCraft.FunctionManager.Implementation.Strategies.AttemptParameters;
+using DotNetCraft.FunctionManager.Implementation.UserFunctionDetails;
 using DotNetCraft.FunctionManager.Interfaces.Builders;
 using DotNetCraft.FunctionManager.Interfaces.ExceptionManagement.Managers;
 using DotNetCraft.FunctionManager.Interfaces.ExceptionManagement.Strategies;
@@ -9,26 +10,39 @@ using DotNetCraft.FunctionManager.Interfaces.UserFunctionDetails;
 
 namespace DotNetCraft.FunctionManager.Implementation.Builders
 {
-    public class SimpleManagerBuilder<TUserContext> : ISimpleManagerBuilder<TUserContext> where TUserContext : IUserContext
+    /// <summary>
+    /// Simple exception manager builder.
+    /// </summary>
+    /// <typeparam name="TUserContext">Type of UserContext</typeparam>
+    public class SimpleExceptionExceptionManagerBuilder<TUserContext> : ISimpleExceptionManagerBuilder<TUserContext>
+        where TUserContext : IUserContext
     {
-        private ISimpleExceptionManager<TUserContext> exceptionManager;
+        /// <summary>
+        /// Simple exception manager.
+        /// </summary>
+        private readonly ISimpleExceptionManager<TUserContext> exceptionManager;
 
-        public SimpleManagerBuilder()
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        public SimpleExceptionExceptionManagerBuilder()
         {
             exceptionManager = new SimpleExceptionManager<TUserContext>();
         }
 
         #region Implementation of ISimpleExceptionManager
 
-        public ISimpleManagerBuilder<TUserContext> RegisterException<TException>() where TException : Exception
+        public ISimpleExceptionManagerBuilder<TUserContext> RegisterException<TException>()
+            where TException : Exception
         {
             exceptionManager.RegisterException<TException>();
             return this;
         }
 
-        public ISimpleManagerBuilder<TUserContext> RegisterException<TException>(Func<TException, bool> expression) where TException : Exception
+        public ISimpleExceptionManagerBuilder<TUserContext> RegisterException<TException>(Func<TException, bool> expression) 
+            where TException : Exception
         {
-            exceptionManager.RegisterException<TException>(expression);
+            exceptionManager.RegisterException(expression);
             return this;
         }
 

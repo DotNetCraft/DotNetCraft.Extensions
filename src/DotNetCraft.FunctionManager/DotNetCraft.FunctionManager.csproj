@@ -24,7 +24,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\..\lib\net40\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -32,16 +32,11 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Exceptions\FunctionManagerException.cs" />
-    <Compile Include="Implementation\Builders\SimpleManagerBuilder.cs" />
-    <Compile Include="Implementation\Builders\SmartManagerBuilder.cs" />
+    <Compile Include="Implementation\Builders\SimpleExceptionExceptionManagerBuilder.cs" />
+    <Compile Include="Implementation\Builders\SmartExceptionManagerBuilder.cs" />
     <Compile Include="Implementation\UserFunctionDetails\FunctionWrapper.cs" />
     <Compile Include="Implementation\ExceptionManagement\Managers\SimpleExceptionManager.cs" />
     <Compile Include="Implementation\ExceptionManagement\Managers\SmartExceptionStrategiesManager.cs" />
@@ -55,8 +50,8 @@
     <Compile Include="FunctionBuilder.cs" />
     <Compile Include="Implementation\UserFunctionDetails\FunctionParameters\UserContext.cs" />
     <Compile Include="Interfaces\Builders\IFunctionWrapperBuilder.cs" />
-    <Compile Include="Interfaces\Builders\ISimpleManagerBuilder.cs" />
-    <Compile Include="Interfaces\Builders\ISmartManagerBuilder.cs" />
+    <Compile Include="Interfaces\Builders\ISimpleExceptionManagerBuilder.cs" />
+    <Compile Include="Interfaces\Builders\ISmartExceptionManagerBuilder.cs" />
     <Compile Include="Interfaces\ExceptionManagement\IExceptionDecisionMaker.cs" />
     <Compile Include="Interfaces\ExceptionManagement\IExceptionRegistration.cs" />
     <Compile Include="Interfaces\ExceptionManagement\Managers\ISimpleExceptionManager.cs" />

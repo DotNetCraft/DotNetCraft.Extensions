@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using DotNetCraft.FunctionManager.Interfaces;
 using DotNetCraft.FunctionManager.Interfaces.ExceptionManagement.Managers;
-using DotNetCraft.FunctionManager.Interfaces.UserFunctionDetails;
 
 namespace DotNetCraft.FunctionManager.Implementation.ExceptionManagement.Managers
 {

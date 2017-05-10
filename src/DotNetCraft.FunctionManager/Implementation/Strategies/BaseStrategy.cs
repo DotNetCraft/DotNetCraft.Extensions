@@ -1,6 +1,5 @@
 ﻿using System;
 using DotNetCraft.FunctionManager.Implementation.Strategies.AttemptParameters;
-using DotNetCraft.FunctionManager.Interfaces;
 using DotNetCraft.FunctionManager.Interfaces.ExceptionManagement.Strategies;
 using DotNetCraft.FunctionManager.Interfaces.ExceptionManagement.Strategies.AttemptParameters;
 using DotNetCraft.FunctionManager.Interfaces.UserFunctionDetails;

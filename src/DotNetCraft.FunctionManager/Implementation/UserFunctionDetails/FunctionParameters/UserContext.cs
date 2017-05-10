@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using DotNetCraft.FunctionManager.Interfaces;
 using DotNetCraft.FunctionManager.Interfaces.UserFunctionDetails;
 
-namespace DotNetCraft.FunctionManager.Implementation.UserFunctionDetails
+namespace DotNetCraft.FunctionManager.Implementation.UserFunctionDetails.FunctionParameters
 {
     public class UserContext: IUserContext
     {

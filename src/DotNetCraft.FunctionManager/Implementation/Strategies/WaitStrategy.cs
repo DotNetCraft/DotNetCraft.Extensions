@@ -12,7 +12,7 @@ namespace DotNetCraft.FunctionManager.Implementation.Strategies
     {
         private readonly List<TimeSpan> _durations;
 
-        public WaitStrategy(TimeSpan[] durations): base()
+        public WaitStrategy(TimeSpan[] durations)
         {
             if (durations == null)
                 throw new ArgumentNullException(nameof(durations));

@@ -4,9 +4,10 @@ using DotNetCraft.FunctionManager.Implementation.UserFunctionDetails.FunctionPar
 using DotNetCraft.FunctionManager.Interfaces.ExceptionManagement;
 using DotNetCraft.FunctionManager.Interfaces.UserFunctionDetails;
 
-namespace DotNetCraft.FunctionManager
+namespace DotNetCraft.FunctionManager.Implementation.UserFunctionDetails
 {
-    public class FunctionWrapper<TUserContext> where TUserContext : IUserContext
+    public class FunctionWrapper<TUserContext> 
+        where TUserContext : IUserContext
     {
         private readonly IExceptionDecisionMaker<TUserContext> _exceptionStrategiesManager;
 

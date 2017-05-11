@@ -20,3 +20,5 @@ test/NinjectDependencyResolver.Tests/bin/
 test/NinjectDependencyResolver.Tests/obj/
 test/FunctionManager.Tests/obj/
 test/FunctionManager.Tests/bin/
+src/DotNetCraft.SimpleEmailSender/obj/
+src/DotNetCraft.SimpleEmailSender/bin/

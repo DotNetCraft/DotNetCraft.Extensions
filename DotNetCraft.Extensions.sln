@@ -12,6 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4EC83D
 		.nuget\DotNetCraft.Common.NinjectDependencyResolver.nuspec = .nuget\DotNetCraft.Common.NinjectDependencyResolver.nuspec
 		.nuget\DotNetCraft.Common.NLogger.nuspec = .nuget\DotNetCraft.Common.NLogger.nuspec
 		.nuget\DotNetCraft.FunctionManager.nuspec = .nuget\DotNetCraft.FunctionManager.nuspec
+		.nuget\DotNetCraft.SimpleEmailSender.nuspec = .nuget\DotNetCraft.SimpleEmailSender.nuspec
 		NuGet.Config = NuGet.Config
 	EndProjectSection
 EndProject
@@ -31,32 +32,53 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NinjectDependencyResolver.T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionManager.Tests", "test\FunctionManager.Tests\FunctionManager.Tests.csproj", "{2B426B01-66FC-4180-A6E7-84C5A48E505A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EmailSender", "EmailSender", "{CBE1E5F5-5BAC-45B4-B5E7-F0E69794629D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCraft.SimpleEmailSender", "src\DotNetCraft.SimpleEmailSender\DotNetCraft.SimpleEmailSender.csproj", "{E963E00E-9CDF-422F-AEEA-CE5B112CCA4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		NET40|Any CPU = NET40|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{D1946366-BF4B-435E-9BEC-3941A48E1E29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D1946366-BF4B-435E-9BEC-3941A48E1E29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1946366-BF4B-435E-9BEC-3941A48E1E29}.NET40|Any CPU.ActiveCfg = NET40|Any CPU
+		{D1946366-BF4B-435E-9BEC-3941A48E1E29}.NET40|Any CPU.Build.0 = NET40|Any CPU
 		{D1946366-BF4B-435E-9BEC-3941A48E1E29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1946366-BF4B-435E-9BEC-3941A48E1E29}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D2156D43-0C0C-4BAD-A017-EF6F09967D8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D2156D43-0C0C-4BAD-A017-EF6F09967D8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2156D43-0C0C-4BAD-A017-EF6F09967D8A}.NET40|Any CPU.ActiveCfg = NET40|Any CPU
+		{D2156D43-0C0C-4BAD-A017-EF6F09967D8A}.NET40|Any CPU.Build.0 = NET40|Any CPU
 		{D2156D43-0C0C-4BAD-A017-EF6F09967D8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2156D43-0C0C-4BAD-A017-EF6F09967D8A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5D3DBC2F-C2A7-45F2-9211-BCE0202749AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5D3DBC2F-C2A7-45F2-9211-BCE0202749AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D3DBC2F-C2A7-45F2-9211-BCE0202749AA}.NET40|Any CPU.ActiveCfg = NET40|Any CPU
+		{5D3DBC2F-C2A7-45F2-9211-BCE0202749AA}.NET40|Any CPU.Build.0 = NET40|Any CPU
 		{5D3DBC2F-C2A7-45F2-9211-BCE0202749AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D3DBC2F-C2A7-45F2-9211-BCE0202749AA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9AF8496A-D568-4B03-98CF-F2102E0796C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9AF8496A-D568-4B03-98CF-F2102E0796C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AF8496A-D568-4B03-98CF-F2102E0796C4}.NET40|Any CPU.ActiveCfg = NET40|Any CPU
+		{9AF8496A-D568-4B03-98CF-F2102E0796C4}.NET40|Any CPU.Build.0 = NET40|Any CPU
 		{9AF8496A-D568-4B03-98CF-F2102E0796C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9AF8496A-D568-4B03-98CF-F2102E0796C4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2B426B01-66FC-4180-A6E7-84C5A48E505A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2B426B01-66FC-4180-A6E7-84C5A48E505A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B426B01-66FC-4180-A6E7-84C5A48E505A}.NET40|Any CPU.ActiveCfg = NET40|Any CPU
+		{2B426B01-66FC-4180-A6E7-84C5A48E505A}.NET40|Any CPU.Build.0 = NET40|Any CPU
 		{2B426B01-66FC-4180-A6E7-84C5A48E505A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B426B01-66FC-4180-A6E7-84C5A48E505A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E963E00E-9CDF-422F-AEEA-CE5B112CCA4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E963E00E-9CDF-422F-AEEA-CE5B112CCA4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E963E00E-9CDF-422F-AEEA-CE5B112CCA4E}.NET40|Any CPU.ActiveCfg = NET40|Any CPU
+		{E963E00E-9CDF-422F-AEEA-CE5B112CCA4E}.NET40|Any CPU.Build.0 = NET40|Any CPU
+		{E963E00E-9CDF-422F-AEEA-CE5B112CCA4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E963E00E-9CDF-422F-AEEA-CE5B112CCA4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,5 +91,6 @@ Global
 		{0725D03E-8BFA-4300-9094-550C4283AC95} = {367266FD-ABF3-4E1E-AD20-24EE33D2D6C4}
 		{9AF8496A-D568-4B03-98CF-F2102E0796C4} = {25405E73-2E77-42F4-AEFD-3328F217006A}
 		{2B426B01-66FC-4180-A6E7-84C5A48E505A} = {0725D03E-8BFA-4300-9094-550C4283AC95}
+		{E963E00E-9CDF-422F-AEEA-CE5B112CCA4E} = {CBE1E5F5-5BAC-45B4-B5E7-F0E69794629D}
 	EndGlobalSection
 EndGlobal

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2B426B01-66FC-4180-A6E7-84C5A48E505A}</ProjectGuid>
+    <ProjectGuid>{E963E00E-9CDF-422F-AEEA-CE5B112CCA4E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FunctionManager.Tests</RootNamespace>
-    <AssemblyName>FunctionManager.Tests</AssemblyName>
+    <RootNamespace>DotNetCraft.SimpleEmailSender</RootNamespace>
+    <AssemblyName>DotNetCraft.SimpleEmailSender</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -22,46 +22,49 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>default</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\..\lib\net45\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>default</LangVersion>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'NET40|AnyCPU'">
-    <OutputPath>bin\NET40\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <OutputPath>..\..\lib\net40\</OutputPath>
+    <DefineConstants>TRACE;NET40</DefineConstants>
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>4</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DemonstrationTests.cs" />
+    <Compile Include="Builders\EmailBuilder.cs" />
+    <Compile Include="ContentBuilders\SimpleContentBuilder.cs" />
+    <Compile Include="EmailManager.cs" />
+    <Compile Include="Entities\Enums\BodyType.cs" />
+    <Compile Include="Entities\Enums\EmailPriotiry.cs" />
+    <Compile Include="Interfaces\IContentBuilder.cs" />
+    <Compile Include="Entities\EmailMessage.cs" />
+    <Compile Include="Entities\FileAttachment.cs" />
+    <Compile Include="Entities\Recipient.cs" />
+    <Compile Include="Entities\SendResponse.cs" />
+    <Compile Include="Interfaces\IEmailBuilder.cs" />
+    <Compile Include="Interfaces\IEmailSender.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\DotNetCraft.FunctionManager\DotNetCraft.FunctionManager.csproj">
-      <Project>{5D3DBC2F-C2A7-45F2-9211-BCE0202749AA}</Project>
-      <Name>DotNetCraft.FunctionManager</Name>
-    </ProjectReference>
+    <Compile Include="Senders\SaveToFileEmailSender.cs" />
+    <Compile Include="Senders\SmtpClientEmailSender.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

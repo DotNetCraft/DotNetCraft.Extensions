@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>DotNetCraft.SimpleEmailSender</id>
+    <version>1.0.0</version>
+    <title>DotNetCraft: SimpleEmailSender For .NET</title>
+    <summary>SimpleEmailSender provides the easiest way for maintenance email works from your applications</summary>
+    <description>SimpleEmailSender provides the easiest way for maintenance email works from your applications. It contains all necessary methods for creating/sending emails as both plain text and HTML.
+    </description>
+    <releaseNotes />
+    <language>en-US</language>
+    <iconUrl>https://raw.githubusercontent.com/DotNetCraft/ConfigurationParser/master/Avatar.png</iconUrl>
+    <licenseUrl>https://github.com/DotNetCraft/DotNetCraft.Extensions/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/DotNetCraft/DotNetCraft.Extensions</projectUrl>
+    <authors>DotNetCraft</authors>
+    <owners>DotNetCraft</owners>
+    <copyright>DotNetCraft 2017</copyright>
+    <tags>email e-mails smtp mail POP3 HTML plain text</tags>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\lib\net40\DotNetCraft.SimpleEmailSender.dll" target="lib\net40" />
+    <file src="..\lib\net45\DotNetCraft.SimpleEmailSender.dll" target="lib\net45" />
+  </files>
+</package>

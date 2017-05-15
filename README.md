@@ -7,7 +7,8 @@ DotNetCraft.Extensions For .NET
 
 This project contains several libraries that can be used in different situations. At this moment these projects have been implemented:
 1. [DotNetCraft.FunctionManager](https://github.com/DotNetCraft/DotNetCraft.Extensions/wiki/DotNetCraft.FunctionManager)
-2. DotNetCraft.Common.NLogger
-3. NinjectDependencyInjectionResolver
+2. [DotNetCraft.SimpleEmailSender](https://github.com/DotNetCraft/DotNetCraft.Extensions/wiki/DotNetCraft.SimpleEmailSender)
+3. DotNetCraft.Common.NLogger
+4. NinjectDependencyInjectionResolver
 
-Several new interesting features comming soon...
+Several new interesting features are comming soon...

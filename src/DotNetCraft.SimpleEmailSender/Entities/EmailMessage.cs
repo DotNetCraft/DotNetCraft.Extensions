@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using DotNetCraft.Common.Utils.Extensions;
 using DotNetCraft.SimpleEmailSender.Entities.Enums;
 
 namespace DotNetCraft.SimpleEmailSender.Entities
@@ -88,22 +89,8 @@ namespace DotNetCraft.SimpleEmailSender.Entities
             stringBuilder.AppendLine(string.Format("Subject: {0}", Subject));
             stringBuilder.AppendLine("--------------------------------------");
 
-            if (string.IsNullOrWhiteSpace(Body))
-            {
-                stringBuilder.AppendLine("");
-            }
-            else
-            {
-                if (Body.Length < maxBodySize)
-                {
-                    stringBuilder.AppendLine(Body);
-                }
-                else
-                {
-                    string str = Body.Substring(0, maxBodySize);
-                    stringBuilder.AppendLine(string.Format("{0}...", Body));
-                }
-            }
+            string bodyItem = (Body == null) ? "" : Body.GetPart(maxBodySize);
+            stringBuilder.AppendLine(bodyItem);
 
             return stringBuilder.ToString();
         }

@@ -1,12 +1,13 @@
 ﻿using System;
 using System.IO;
+using DotNetCraft.Common.Utils.Disposal;
 
 namespace DotNetCraft.SimpleEmailSender.Entities
 {
     /// <summary>
     /// File attachment
     /// </summary>
-    public class FileAttachment : IDisposable
+    public class FileAttachment : DisposableObject
     {
         /// <summary>
         /// Name of the file
@@ -39,17 +40,27 @@ namespace DotNetCraft.SimpleEmailSender.Entities
             ContentType = contentType;
         }
 
-        #region Implementation of IDisposable
+        #region Overrides of DisposableObject
 
-        /// <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
-        public void Dispose()
+        public override void Dispose(bool disposing)
         {
-            //TODO: Disposable pattern
-            if (Data != null)
+            if (disposing && Data != null)
             {
                 Data.Dispose();
                 Data = null;
             }
+            base.Dispose(disposing);
+        }
+
+        #endregion
+
+        #region Overrides of Object
+
+        /// <summary>Returns a string that represents the current object.</summary>
+        /// <returns>A string that represents the current object.</returns>
+        public override string ToString()
+        {
+            return Filename;
         }
 
         #endregion

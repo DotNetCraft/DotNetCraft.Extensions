@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Reflection;
+using DotNetCraft.Common.Core.Utils;
+using DotNetCraft.Common.Core.Utils.Logging;
+using DotNetCraft.Common.Utils.Logging;
 using DotNetCraft.SimpleEmailSender.Interfaces;
 
 namespace DotNetCraft.SimpleEmailSender.ContentBuilders
@@ -12,7 +15,19 @@ namespace DotNetCraft.SimpleEmailSender.ContentBuilders
     /// </remarks>
     public class SimpleContentBuilder : IContentBuilder
     {
+        private static readonly ICommonLogger logger = LogManager.GetCurrentClassLogger();
+
+        private readonly IPropertyManager propertyManager;
+
         public const string placeHolder = "#{{{0}}}";
+
+        public SimpleContentBuilder(IPropertyManager propertyManager)
+        {
+            if (propertyManager == null)
+                throw new ArgumentNullException("propertyManager");
+
+            this.propertyManager = propertyManager;
+        }
 
         #region Implementation of IContentBuilder
 

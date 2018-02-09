@@ -41,27 +41,31 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DotNetCraft.Common.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\DotNetCraft.Common.1.0.6\lib\net40\DotNetCraft.Common.Core.dll</HintPath>
+      <HintPath>..\..\Packages\DotNetCraft.Common.2.0.0\lib\net40\DotNetCraft.Common.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="DotNetCraft.Common.Core.Domain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\DotNetCraft.Common.1.0.6\lib\net40\DotNetCraft.Common.Core.Domain.dll</HintPath>
+      <HintPath>..\..\Packages\DotNetCraft.Common.2.0.0\lib\net40\DotNetCraft.Common.Core.Domain.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="DotNetCraft.Common.Core.Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\DotNetCraft.Common.1.0.6\lib\net40\DotNetCraft.Common.Core.Utils.dll</HintPath>
+      <HintPath>..\..\Packages\DotNetCraft.Common.2.0.0\lib\net40\DotNetCraft.Common.Core.Utils.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="DotNetCraft.Common.DataAccessLayer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\DotNetCraft.Common.1.0.6\lib\net40\DotNetCraft.Common.DataAccessLayer.dll</HintPath>
+      <HintPath>..\..\Packages\DotNetCraft.Common.2.0.0\lib\net40\DotNetCraft.Common.DataAccessLayer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="DotNetCraft.Common.Domain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\DotNetCraft.Common.1.0.6\lib\net40\DotNetCraft.Common.Domain.dll</HintPath>
+      <HintPath>..\..\Packages\DotNetCraft.Common.2.0.0\lib\net40\DotNetCraft.Common.Domain.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotNetCraft.Common.ReadyDataAccessLayer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\Packages\DotNetCraft.Common.2.0.0\lib\net40\DotNetCraft.Common.ReadyDataAccessLayer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="DotNetCraft.Common.Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\DotNetCraft.Common.1.0.6\lib\net40\DotNetCraft.Common.Utils.dll</HintPath>
+      <HintPath>..\..\Packages\DotNetCraft.Common.2.0.0\lib\net40\DotNetCraft.Common.Utils.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
@@ -74,6 +78,10 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http">
+      <HintPath>..\..\Packages\DotNetCraft.Common.2.0.0\lib\net40\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NinjectDependencyResolverTests.cs" />

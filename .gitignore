@@ -22,3 +22,5 @@ test/FunctionManager.Tests/obj/
 test/FunctionManager.Tests/bin/
 src/DotNetCraft.SimpleEmailSender/obj/
 src/DotNetCraft.SimpleEmailSender/bin/
+src/DotNetCraft.Common.Mapping/DotNetCraft.Common.Mapping/bin/
+src/DotNetCraft.Common.Mapping/DotNetCraft.Common.Mapping/obj/

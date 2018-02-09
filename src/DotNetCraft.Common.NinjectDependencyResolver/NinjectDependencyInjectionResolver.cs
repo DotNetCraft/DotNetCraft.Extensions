@@ -27,6 +27,11 @@ namespace DotNetCraft.Common.NinjectDependencyResolver
 
         #region Overrides of BaseDependencyResolver
 
+        public override TResolver Resolve<TResolver>()
+        {
+            return kernel.Get<TResolver>();
+        }
+
         protected override object OnResolve(Type serviceType, string serviceName)
         {
             if (string.IsNullOrWhiteSpace(serviceName))

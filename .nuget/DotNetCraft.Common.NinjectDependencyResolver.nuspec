@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>DotNetCraft.Common.NinjectDependencyResolver</id>
-    <version>1.0.0</version>
+    <version>2.0.0.0</version>
     <title>DotNetCraft.Common.NinjectDependencyResolver For .NET</title>
     <summary>Ninject integration for DotNetCraft.Common</summary>
     <description>Provides Ninject integration for other DotNetCraft projects.</description>

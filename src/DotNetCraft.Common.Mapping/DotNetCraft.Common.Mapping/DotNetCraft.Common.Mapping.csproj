@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D1946366-BF4B-435E-9BEC-3941A48E1E29}</ProjectGuid>
+    <ProjectGuid>{4DEB2EBA-6F68-4A82-9622-86FB3C59FD7B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DotNetCraft.Common.NLogger</RootNamespace>
-    <AssemblyName>DotNetCraft.Common.NLogger</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <RootNamespace>DotNetCraft.Common.Mapping</RootNamespace>
+    <AssemblyName>DotNetCraft.Common.Mapping</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -21,67 +21,64 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\lib\net40\</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'NET40|AnyCPU'">
-    <OutputPath>bin\NET40\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Packages\AutoMapper.6.1.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="DotNetCraft.Common.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\DotNetCraft.Common.2.0.0\lib\net40\DotNetCraft.Common.Core.dll</HintPath>
+      <HintPath>..\..\..\Packages\DotNetCraft.Common.1.0.8.12\lib\net40\DotNetCraft.Common.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="DotNetCraft.Common.Core.Domain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\DotNetCraft.Common.2.0.0\lib\net40\DotNetCraft.Common.Core.Domain.dll</HintPath>
+      <HintPath>..\..\..\Packages\DotNetCraft.Common.1.0.8.12\lib\net40\DotNetCraft.Common.Core.Domain.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="DotNetCraft.Common.Core.Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\DotNetCraft.Common.2.0.0\lib\net40\DotNetCraft.Common.Core.Utils.dll</HintPath>
+      <HintPath>..\..\..\Packages\DotNetCraft.Common.1.0.8.12\lib\net40\DotNetCraft.Common.Core.Utils.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="DotNetCraft.Common.DataAccessLayer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\DotNetCraft.Common.2.0.0\lib\net40\DotNetCraft.Common.DataAccessLayer.dll</HintPath>
+      <HintPath>..\..\..\Packages\DotNetCraft.Common.1.0.8.12\lib\net40\DotNetCraft.Common.DataAccessLayer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="DotNetCraft.Common.Domain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\DotNetCraft.Common.2.0.0\lib\net40\DotNetCraft.Common.Domain.dll</HintPath>
+      <HintPath>..\..\..\Packages\DotNetCraft.Common.1.0.8.12\lib\net40\DotNetCraft.Common.Domain.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="DotNetCraft.Common.ReadyDataAccessLayer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\DotNetCraft.Common.2.0.0\lib\net40\DotNetCraft.Common.ReadyDataAccessLayer.dll</HintPath>
+      <HintPath>..\..\..\Packages\DotNetCraft.Common.1.0.8.12\lib\net40\DotNetCraft.Common.ReadyDataAccessLayer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="DotNetCraft.Common.Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\DotNetCraft.Common.2.0.0\lib\net40\DotNetCraft.Common.Utils.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\NLog.4.4.4\lib\net40\NLog.dll</HintPath>
+      <HintPath>..\..\..\Packages\DotNetCraft.Common.1.0.8.12\lib\net40\DotNetCraft.Common.Utils.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\Packages\DotNetCraft.Common.2.0.0\lib\net40\System.Net.Http.dll</HintPath>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\..\..\Packages\DotNetCraft.Common.1.0.8.12\lib\net40\System.Net.Http.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommonNLogLogger.cs" />
-    <Compile Include="CommonNLogLoggerFactory.cs" />
+    <Compile Include="AutoEntityModelMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

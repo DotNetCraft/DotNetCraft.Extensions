@@ -1,5 +1,5 @@
-﻿using DotNetCraft.Common.Core.Utils;
-using DotNetCraft.Common.Utils;
+﻿using DotNetCraft.Common.Core.Utils.ReflectionExtensions;
+using DotNetCraft.Common.Utils.ReflectionExtensions;
 using DotNetCraft.SimpleEmailSender.Builders;
 using DotNetCraft.SimpleEmailSender.ContentBuilders;
 using DotNetCraft.SimpleEmailSender.Interfaces;
@@ -10,8 +10,8 @@ namespace DotNetCraft.SimpleEmailSender
     {
         public static IEmailBuilder Builder()
         {
-            IPropertyManager propertyManager = PropertyManager.Manager;
-            IContentBuilder contentBuilder = new SimpleContentBuilder(propertyManager);
+            IReflectionManager reflectionManager = ReflectionManager.Manager;
+            IContentBuilder contentBuilder = new SimpleContentBuilder(reflectionManager);
             return new EmailBuilder(contentBuilder);
         }
 
